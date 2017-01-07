@@ -1,1 +1,8 @@
-<h2> I hear them! The soft clanging of voices that have no body! </h2>
+<h2> "I hear them! The soft clanging of voices that have no body!" </h2>
+
+<% @characters.each do |char| %>
+  <h3> <%= link_to char.name, character_path(char) %> </h3>
+<%end%>
+
+<%= button_to "Give life!", new_character_path, :method => "get" %>
+

@@ -1,0 +1,11 @@
+<h1>  <%= @character.name %> </h1>
+
+<p>
+<%= @character.description %>
+<p>
+
+<%= button_to "Change", edit_character_path(@character), :method => "get" %>
+<br>
+<%= button_to "Kill", character_path(@character), method: :delete, data: { confirm: "Don't do this to me!" }%>
+<br>
+<%= button_to "Home", root_path(), :method => "get" %>
